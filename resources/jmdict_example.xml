@@ -1,0 +1,416 @@
+<entry>
+<ent_seq>1000200</ent_seq>
+<k_ele>
+<keb>阿吽の呼吸</keb>
+</k_ele>
+<k_ele>
+<keb>あうんの呼吸</keb>
+</k_ele>
+<k_ele>
+<keb>あ・うんの呼吸</keb>
+<ke_inf>&sK;</ke_inf>
+</k_ele>
+<r_ele>
+<reb>あうんのこきゅう</reb>
+</r_ele>
+<sense>
+<pos>&exp;</pos>
+<pos>&n;</pos>
+<misc>&id;</misc>
+<gloss>the harmonizing, mentally and physically, of two parties engaged in an activity</gloss>
+<gloss>singing from the same hymn-sheet</gloss>
+<gloss>dancing to the same beat</gloss>
+</sense>
+<sense>
+<gloss xml:lang="dut">uitademing en inademing</gloss>
+</sense>
+<sense>
+<gloss xml:lang="dut">{sumō-jargon} het onderling synchroniseren van de concentratie</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">die geistige und körperliche Harmonisierung bei einer gemeinsamen Aktivität</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">la armonización mental y físicamente de dos partes entablados en una actividad</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000210</ent_seq>
+<r_ele>
+<reb>あおば</reb>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<xref>やまびこ</xref>
+<misc>&obs;</misc>
+<gloss>(former) regular (stops at every station) Tōhoku-line Shinkansen</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">Aoba-Shinkansen (hält an allen Stationen der Tōhoku-Linie)</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">(antiguo) Shinkansen regular (se detiene en todas las estaciones) de la línea Touhoku</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000220</ent_seq>
+<k_ele>
+<keb>明白</keb>
+<ke_pri>ichi1</ke_pri>
+<ke_pri>news1</ke_pri>
+<ke_pri>nf10</ke_pri>
+</k_ele>
+<r_ele>
+<reb>めいはく</reb>
+<re_pri>ichi1</re_pri>
+<re_pri>news1</re_pri>
+<re_pri>nf10</re_pri>
+</r_ele>
+<sense>
+<pos>&adj-na;</pos>
+<gloss>obvious</gloss>
+<gloss>clear</gloss>
+<gloss>plain</gloss>
+<gloss>evident</gloss>
+<gloss>apparent</gloss>
+<gloss>explicit</gloss>
+<gloss>overt</gloss>
+</sense>
+<sense>
+<gloss xml:lang="dut">duidelijk</gloss>
+<gloss xml:lang="dut">klaar</gloss>
+<gloss xml:lang="dut">zonneklaar</gloss>
+<gloss xml:lang="dut">niet mis te verstaan</gloss>
+<gloss xml:lang="dut">aanwijsbaar</gloss>
+<gloss xml:lang="dut">ondubbelzinnig</gloss>
+<gloss xml:lang="dut">onmiskenbaar</gloss>
+<gloss xml:lang="dut">kennelijk</gloss>
+<gloss xml:lang="dut">apert</gloss>
+<gloss xml:lang="dut">evident</gloss>
+<gloss xml:lang="dut">klaarblijkelijk</gloss>
+</sense>
+<sense>
+<gloss xml:lang="fre">évident</gloss>
+<gloss xml:lang="fre">clair</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">Klarheit</gloss>
+<gloss xml:lang="ger">Deutlichkeit</gloss>
+<gloss xml:lang="ger">Offensichtlichkeit</gloss>
+<gloss xml:lang="ger">Offenkundigkeit</gloss>
+<gloss xml:lang="ger">Augenscheinlichkeit</gloss>
+<gloss xml:lang="ger">Unverkennbarkeit</gloss>
+<gloss xml:lang="ger">Unmissverständlichkeit</gloss>
+<gloss xml:lang="ger">klar</gloss>
+<gloss xml:lang="ger">deutlich</gloss>
+<gloss xml:lang="ger">offensichtlich</gloss>
+<gloss xml:lang="ger">klar</gloss>
+<gloss xml:lang="ger">deutlich</gloss>
+<gloss xml:lang="ger">offensichtlich</gloss>
+<gloss xml:lang="ger">offenkundig</gloss>
+<gloss xml:lang="ger">augenscheinlich</gloss>
+<gloss xml:lang="ger">einleuchtend</gloss>
+<gloss xml:lang="ger">unmissverständlich</gloss>
+<gloss xml:lang="ger">unbestritten</gloss>
+<gloss xml:lang="ger">unverkennbar</gloss>
+<gloss xml:lang="ger">Klarheit</gloss>
+<gloss xml:lang="ger">Deutlichkeit</gloss>
+<gloss xml:lang="ger">Offensichtlichkeit</gloss>
+<gloss xml:lang="ger">Offenkundigkeit</gloss>
+<gloss xml:lang="ger">Augenscheinlichkeit</gloss>
+<gloss xml:lang="ger">Unverkennbarkeit</gloss>
+<gloss xml:lang="ger">Unmissverständlichkeit</gloss>
+</sense>
+<sense>
+<gloss xml:lang="hun">kereken</gloss>
+<gloss xml:lang="hun">nyilvánvalóan</gloss>
+<gloss xml:lang="hun">világosan</gloss>
+</sense>
+<sense>
+<gloss xml:lang="rus">: {～な} ясный, очевидный</gloss>
+<gloss xml:lang="rus">{～にする} разъяснять, выяснять, уточнять</gloss>
+</sense>
+<sense>
+<gloss xml:lang="slv">jasen</gloss>
+<gloss xml:lang="slv">razumljiv</gloss>
+<gloss xml:lang="slv">očiten</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">obvio</gloss>
+<gloss xml:lang="spa">evidente</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000225</ent_seq>
+<k_ele>
+<keb>明白</keb>
+<ke_inf>&ateji;</ke_inf>
+<ke_inf>&rK;</ke_inf>
+</k_ele>
+<k_ele>
+<keb>偸閑</keb>
+<ke_inf>&ateji;</ke_inf>
+<ke_inf>&rK;</ke_inf>
+</k_ele>
+<k_ele>
+<keb>白地</keb>
+<ke_inf>&ateji;</ke_inf>
+<ke_inf>&rK;</ke_inf>
+</k_ele>
+<r_ele>
+<reb>あからさま</reb>
+</r_ele>
+<sense>
+<pos>&adj-na;</pos>
+<pos>&adj-no;</pos>
+<misc>&uk;</misc>
+<gloss>plain</gloss>
+<gloss>frank</gloss>
+<gloss>candid</gloss>
+<gloss>open</gloss>
+<gloss>direct</gloss>
+<gloss>straightforward</gloss>
+<gloss>unabashed</gloss>
+<gloss>blatant</gloss>
+<gloss>flagrant</gloss>
+</sense>
+<sense>
+<gloss xml:lang="fre">crû</gloss>
+<gloss xml:lang="fre">franc</gloss>
+<gloss xml:lang="fre">candide</gloss>
+<gloss xml:lang="fre">ouvert</gloss>
+<gloss xml:lang="fre">direct</gloss>
+<gloss xml:lang="fre">sans être embarrassé</gloss>
+<gloss xml:lang="fre">sans honte</gloss>
+<gloss xml:lang="fre">flagrant</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">klar</gloss>
+<gloss xml:lang="ger">deutlich</gloss>
+<gloss xml:lang="ger">ausdrücklich</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">offen</gloss>
+<gloss xml:lang="ger">offenherzig</gloss>
+<gloss xml:lang="ger">unverhohlen</gloss>
+<gloss xml:lang="ger">aufrichtig</gloss>
+<gloss xml:lang="ger">frisch von der Leber weg</gloss>
+</sense>
+<sense>
+<gloss xml:lang="hun">kereken</gloss>
+<gloss xml:lang="hun">nyilvánvalóan</gloss>
+<gloss xml:lang="hun">világosan</gloss>
+</sense>
+<sense>
+<gloss xml:lang="rus">очевидный</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000230</ent_seq>
+<k_ele>
+<keb>明かん</keb>
+<ke_inf>&rK;</ke_inf>
+</k_ele>
+<r_ele>
+<reb>あかん</reb>
+</r_ele>
+<r_ele>
+<reb>アカン</reb>
+<re_nokanji/>
+</r_ele>
+<r_ele>
+<reb>あかーん</reb>
+<re_inf>&sk;</re_inf>
+</r_ele>
+<sense>
+<pos>&exp;</pos>
+<misc>&uk;</misc>
+<s_inf>commonly used with i-adjective inflections, e.g. あかんかった, あかんくない</s_inf>
+<dial>&ksb;</dial>
+<gloss>useless</gloss>
+<gloss>no good</gloss>
+<gloss>hopeless</gloss>
+</sense>
+<sense>
+<pos>&exp;</pos>
+<misc>&uk;</misc>
+<dial>&ksb;</dial>
+<gloss>cannot</gloss>
+<gloss>must not</gloss>
+<gloss>not allowed</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">schlecht</gloss>
+<gloss xml:lang="ger">mies</gloss>
+<gloss xml:lang="ger">blöd</gloss>
+<gloss xml:lang="ger">zwecklos</gloss>
+<gloss xml:lang="ger">umsonst</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">zu nichts nutze</gloss>
+<gloss xml:lang="ger">nutzlos</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">unmöglich</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">inútil</gloss>
+<gloss xml:lang="spa">no bueno</gloss>
+<gloss xml:lang="spa">sin esperanza</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000260</ent_seq>
+<k_ele>
+<keb>悪どい</keb>
+<ke_inf>&ateji;</ke_inf>
+</k_ele>
+<k_ele>
+<keb>灰汁どい</keb>
+<ke_inf>&rK;</ke_inf>
+</k_ele>
+<r_ele>
+<reb>あくどい</reb>
+</r_ele>
+<sense>
+<pos>&adj-i;</pos>
+<xref>アクが強い・2</xref>
+<misc>&uk;</misc>
+<gloss>gaudy</gloss>
+<gloss>showy</gloss>
+<gloss>garish</gloss>
+<gloss>loud</gloss>
+</sense>
+<sense>
+<pos>&adj-i;</pos>
+<misc>&uk;</misc>
+<gloss>crooked</gloss>
+<gloss>vicious</gloss>
+<gloss>wicked</gloss>
+<gloss>nasty</gloss>
+<gloss>unscrupulous</gloss>
+<gloss>dishonest</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">aufgedonnert</gloss>
+<gloss xml:lang="ger">schreiend</gloss>
+<gloss xml:lang="ger">grell</gloss>
+<gloss xml:lang="ger">aufgeputzt</gloss>
+<gloss xml:lang="ger">schwer</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">übel</gloss>
+<gloss xml:lang="ger">schlimm</gloss>
+<gloss xml:lang="ger">arglistig</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">ermüdend</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">chillón</gloss>
+<gloss xml:lang="spa">llamativo</gloss>
+<gloss xml:lang="spa">excesivo</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">vicioso</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000280</ent_seq>
+<k_ele>
+<keb>論う</keb>
+</k_ele>
+<r_ele>
+<reb>あげつらう</reb>
+</r_ele>
+<sense>
+<pos>&v5u;</pos>
+<pos>&vt;</pos>
+<misc>&uk;</misc>
+<gloss>to discuss</gloss>
+</sense>
+<sense>
+<pos>&v5u;</pos>
+<pos>&vt;</pos>
+<misc>&uk;</misc>
+<gloss>to find fault with</gloss>
+<gloss>to criticize</gloss>
+<gloss>to criticise</gloss>
+</sense>
+<sense>
+<gloss xml:lang="dut">ter discussie stellen</gloss>
+<gloss xml:lang="dut">discussiëren over</gloss>
+<gloss xml:lang="dut">bediscussiëren</gloss>
+</sense>
+<sense>
+<gloss xml:lang="dut">moeilijk doen over</gloss>
+<gloss xml:lang="dut">bevitten</gloss>
+<gloss xml:lang="dut">bekritiseren</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">diskutieren</gloss>
+<gloss xml:lang="ger">erörtern</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">kritisieren</gloss>
+<gloss xml:lang="ger">bekritteln</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">aufgreifen (ein Thema)</gloss>
+</sense>
+<sense>
+<gloss xml:lang="hun">fejteget</gloss>
+<gloss xml:lang="hun">gáncsoskodik</gloss>
+<gloss xml:lang="hun">hibásnak talál</gloss>
+<gloss xml:lang="hun">kritizál</gloss>
+<gloss xml:lang="hun">bírál</gloss>
+</sense>
+<sense>
+<gloss xml:lang="spa">cuestionar</gloss>
+<gloss xml:lang="spa">sopesar los pros y los contras</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000300</ent_seq>
+<k_ele>
+<keb>遇う</keb>
+</k_ele>
+<k_ele>
+<keb>配う</keb>
+</k_ele>
+<r_ele>
+<reb>あしらう</reb>
+</r_ele>
+<sense>
+<stagk>遇う</stagk>
+<pos>&v5u;</pos>
+<pos>&vt;</pos>
+<misc>&uk;</misc>
+<gloss>to treat</gloss>
+<gloss>to handle</gloss>
+<gloss>to deal with</gloss>
+</sense>
+<sense>
+<pos>&v5u;</pos>
+<pos>&vt;</pos>
+<misc>&uk;</misc>
+<gloss>to arrange</gloss>
+<gloss>to decorate (with)</gloss>
+<gloss>to adorn (with)</gloss>
+<gloss>to dress (with)</gloss>
+<gloss>to garnish (with)</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">behandeln</gloss>
+<gloss xml:lang="ger">empfangen</gloss>
+<gloss xml:lang="ger">entgegennehmen</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">handhaben</gloss>
+<gloss xml:lang="ger">umgehen</gloss>
+</sense>
+<sense>
+<gloss xml:lang="ger">garnieren</gloss>
+<gloss xml:lang="ger">hinzufügen</gloss>
+</sense>
+</entry>
