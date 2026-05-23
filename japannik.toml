@@ -1,0 +1,87 @@
+# japannik configuration
+# All settings are optional — missing keys fall back to the defaults shown here.
+
+# ── File locations ────────────────────────────────────────────────────────────
+
+[paths]
+db            = "japannik.db"
+jmdict        = "resources/JMdict"
+frequency     = "resources/frequency_spoken.tsv"
+known_words_dir = "known_words"
+sudachi_dict  = "resources/system.dic"
+
+# ── General behaviour ─────────────────────────────────────────────────────────
+
+[general]
+# Tokenisation granularity.
+#   single   → smallest morpheme units (splits 気がする into 気 / が / する)
+#   compound → standard dictionary words
+#   idioms   → largest units; keeps set phrases together (気がする as one token)
+sudachi_mode = "idioms"
+
+# Skip words already marked as known in the database.
+ignore_known_words = true
+
+# When importing known words from files, also add sudachi dictionary forms
+# so inflected entries (e.g. 構わない) also mark their base form (構う).
+normalize_known_words = true
+
+# Print extra information such as "[debug] known word not in JMdict" lines.
+verbose = false
+
+# Column index (0-based) in Anki TSV exports that holds the clean word.
+# Column 0 works correctly for all standard Anki deck exports.
+known_words_col = 0
+
+# ── Output ────────────────────────────────────────────────────────────────────
+
+[output]
+# Pool A: top N unknown words ranked by how often they appear in the input text.
+max_from_text = 10
+
+# Pool B: from the remaining text unknowns, take the top M by general corpus
+# frequency. Catches high-value words that happened to appear rarely in this
+# specific text (e.g. 飲む appearing once in a One Piece episode).
+max_from_corpus = 5
+
+# Reserved for future sentence-mining. Leave at 0.
+max_from_sentences = 0
+
+# For the sentence feature: a "perfect" sentence has at most this many unknowns.
+max_unknown_in_sentence = 2
+
+# Ignore words that appear fewer than this many times in the input text.
+min_text_occurrences = 1
+
+# JMdict language codes to include as translation columns in the vocab CSV.
+output_languages = ["de", "en"]
+
+# Add a freq_score column to the vocab CSV showing the computed corpus score.
+output_freq_score = false
+
+# ── Frequency bias ────────────────────────────────────────────────────────────
+# Adds category-specific counts to the base freq_total score for Pool B ranking.
+#   score = freq_total + gaming * freq_gaming + film * freq_film + …
+#
+# Example — gaming-focused learner:
+#   gaming = 2.0
+#   film   = 1.0
+#
+# All weights default to 0.0 (rank purely by overall frequency).
+
+[frequency_bias]
+howto         = 0.0
+science       = 0.0
+entertainment = 0.0
+education     = 0.0
+people        = 0.0
+music         = 0.0
+autos         = 0.0
+comedy        = 0.0
+film          = 0.0
+gaming        = 0.0
+sports        = 0.0
+news          = 0.0
+nonprofits    = 0.0
+travel        = 0.0
+pets          = 0.0

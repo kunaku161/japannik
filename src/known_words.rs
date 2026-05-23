@@ -42,6 +42,37 @@ pub fn load_from_dir(dir: &str, col: usize, normalizer: Option<&mut Normalizer>)
     words
 }
 
+/// Imports a single Anki TSV file instead of the whole directory.
+pub fn load_from_file(path: &Path, col: usize, normalizer: Option<&mut Normalizer>) -> HashSet<String> {
+    let mut words: HashSet<String> = HashSet::new();
+    let raw = read_anki_file(path, col);
+    println!(
+        "  {}: {} words",
+        path.file_name().unwrap_or_default().to_string_lossy(),
+        raw.len()
+    );
+    words.extend(raw);
+
+    if let Some(norm) = normalizer {
+        let originals: Vec<String> = words.iter().cloned().collect();
+        let mut added = 0usize;
+        for word in &originals {
+            for m in norm.normalize(word).iter() {
+                let dict_form: String =
+                    m.dictionary_form().chars().filter(|&c| is_japanese(c)).collect();
+                if !dict_form.is_empty() && words.insert(dict_form) {
+                    added += 1;
+                }
+            }
+        }
+        if added > 0 {
+            println!("After normalization: +{} forms, {} total", added, words.len());
+        }
+    }
+
+    words
+}
+
 fn read_anki_file(path: &Path, col: usize) -> Vec<String> {
     let content = match fs::read_to_string(path) {
         Ok(c) => c,
