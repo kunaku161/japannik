@@ -45,8 +45,152 @@ pub fn init_dictionary(db_path: &str, jmdict_path: &str) {
         parse_and_insert(&conn, jmdict_path);
     }
 
-    // Always re-sync known words — the list can change independently of the JMdict import
-    update_known_words(&conn, "resources/known_words.txt");
+}
+
+// Category frequency columns — order matches the TSV (cols 1, 4–18).
+// Exposed so callers can build weighted scores with user-configured bias.
+pub const FREQ_COLS: &[&str] = &[
+    "freq_total",
+    "freq_howto", "freq_science", "freq_entertainment", "freq_education",
+    "freq_people", "freq_music", "freq_autos", "freq_comedy", "freq_film",
+    "freq_gaming", "freq_sports", "freq_news", "freq_nonprofits",
+    "freq_travel", "freq_pets",
+];
+
+// Adds per-category frequency data from the spoken-YouTube corpus to the words table.
+// Uses a temp table + single UPDATE FROM for performance; safe to call on every startup
+// since it detects an already-populated table and skips the import.
+pub fn init_frequency(db_path: &str, freq_path: &str) {
+    let conn = Connection::open(db_path).expect("failed to open DB");
+
+    // Migrate: add freq columns if absent (silently ignored when already present)
+    for col in FREQ_COLS {
+        let _ = conn.execute_batch(&format!(
+            "ALTER TABLE words ADD COLUMN {col} INTEGER NOT NULL DEFAULT 0"
+        ));
+    }
+
+    // The word-lookup index doubles as "frequency already imported" marker
+    let already_done: bool = conn
+        .query_row(
+            "SELECT COUNT(*) FROM sqlite_master WHERE type='index' AND name='idx_words_word'",
+            [],
+            |r| r.get::<_, i64>(0),
+        )
+        .unwrap_or(0)
+        > 0;
+    if already_done {
+        let n: i64 = conn
+            .query_row("SELECT COUNT(*) FROM words WHERE freq_total > 0", [], |r| r.get(0))
+            .unwrap_or(0);
+        println!("Frequency data already loaded ({} words matched), skipping.", n);
+        return;
+    }
+
+    conn.execute_batch(
+        "CREATE INDEX IF NOT EXISTS idx_words_word ON words(word)",
+    )
+    .expect("failed to create word index");
+
+    conn.execute_batch(
+        "CREATE TEMP TABLE freq_data (
+            word             TEXT PRIMARY KEY,
+            freq_total       INTEGER NOT NULL DEFAULT 0,
+            freq_howto       INTEGER NOT NULL DEFAULT 0,
+            freq_science     INTEGER NOT NULL DEFAULT 0,
+            freq_entertainment INTEGER NOT NULL DEFAULT 0,
+            freq_education   INTEGER NOT NULL DEFAULT 0,
+            freq_people      INTEGER NOT NULL DEFAULT 0,
+            freq_music       INTEGER NOT NULL DEFAULT 0,
+            freq_autos       INTEGER NOT NULL DEFAULT 0,
+            freq_comedy      INTEGER NOT NULL DEFAULT 0,
+            freq_film        INTEGER NOT NULL DEFAULT 0,
+            freq_gaming      INTEGER NOT NULL DEFAULT 0,
+            freq_sports      INTEGER NOT NULL DEFAULT 0,
+            freq_news        INTEGER NOT NULL DEFAULT 0,
+            freq_nonprofits  INTEGER NOT NULL DEFAULT 0,
+            freq_travel      INTEGER NOT NULL DEFAULT 0,
+            freq_pets        INTEGER NOT NULL DEFAULT 0
+        )",
+    )
+    .expect("failed to create freq_data temp table");
+
+    let content = fs::read_to_string(freq_path).expect("failed to read frequency file");
+    println!("Loading frequency data...");
+
+    conn.execute_batch("BEGIN").expect("begin");
+    let mut stmt = conn
+        .prepare(
+            "INSERT OR IGNORE INTO freq_data VALUES \
+             (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17)",
+        )
+        .expect("failed to prepare freq insert");
+
+    let mut count = 0u32;
+    for line in content.lines().skip(1) {
+        let cols: Vec<&str> = line.split('\t').collect();
+        if cols.len() < 19 {
+            continue;
+        }
+        let p = |i: usize| -> i64 { cols[i].parse().unwrap_or(0) };
+        stmt.execute(params![
+            cols[0],
+            p(1),  // total
+            p(4),  // howto
+            p(5),  // science
+            p(6),  // entertainment
+            p(7),  // education
+            p(8),  // people
+            p(9),  // music
+            p(10), // autos
+            p(11), // comedy
+            p(12), // film
+            p(13), // gaming
+            p(14), // sports
+            p(15), // news
+            p(16), // nonprofits
+            p(17), // travel
+            p(18), // pets
+        ])
+        .expect("failed to insert freq entry");
+        count += 1;
+        if count % 50_000 == 0 {
+            conn.execute_batch("COMMIT; BEGIN").expect("batch commit");
+            println!("  {} entries...", count);
+        }
+    }
+    conn.execute_batch("COMMIT").expect("final commit");
+    println!("  {} frequency entries loaded", count);
+
+    println!("Matching frequencies to dictionary...");
+    conn.execute_batch(
+        "UPDATE words
+         SET
+             freq_total         = f.freq_total,
+             freq_howto         = f.freq_howto,
+             freq_science       = f.freq_science,
+             freq_entertainment = f.freq_entertainment,
+             freq_education     = f.freq_education,
+             freq_people        = f.freq_people,
+             freq_music         = f.freq_music,
+             freq_autos         = f.freq_autos,
+             freq_comedy        = f.freq_comedy,
+             freq_film          = f.freq_film,
+             freq_gaming        = f.freq_gaming,
+             freq_sports        = f.freq_sports,
+             freq_news          = f.freq_news,
+             freq_nonprofits    = f.freq_nonprofits,
+             freq_travel        = f.freq_travel,
+             freq_pets          = f.freq_pets
+         FROM freq_data f
+         WHERE words.word = f.word",
+    )
+    .expect("failed to update word frequencies");
+
+    let matched: i64 = conn
+        .query_row("SELECT COUNT(*) FROM words WHERE freq_total > 0", [], |r| r.get(0))
+        .unwrap_or(0);
+    println!("Frequency import complete: {} words matched in dictionary", matched);
 }
 
 pub struct WordEntry {
@@ -136,22 +280,15 @@ pub fn load_known_words(db_path: &str) -> HashSet<String> {
     known
 }
 
-// Reads known_words.txt (one word per line) and marks matching entries in the DB.
-// Resets all is_known flags first so removals from the file are reflected correctly.
+// Resets all is_known flags and marks DB rows matching the provided word set.
 // Matches on both `word` (kanji) and `word_kana` (hiragana) to cover all input forms.
 // TODO/TOTEST: What if only kana and too many words get updated? This is a hard one to figure out
-fn update_known_words(conn: &Connection, path: &str) {
-    let content = fs::read_to_string(path).expect("failed to read known_words.txt");
-    let words: Vec<&str> = content
-        .lines()
-        .map(str::trim)
-        .filter(|l| !l.is_empty())
-        .collect();
-
+pub fn sync_known_words(db_path: &str, words: &HashSet<String>) {
+    let conn = Connection::open(db_path).expect("failed to open DB");
     conn.execute_batch("UPDATE words SET is_known = 0").expect("failed to reset is_known");
 
     let mut matched = 0usize;
-    for word in &words {
+    for word in words {
         let n = conn
             .execute(
                 "UPDATE words SET is_known = 1 WHERE word = ?1 OR word_kana = ?1",
@@ -165,7 +302,7 @@ fn update_known_words(conn: &Connection, path: &str) {
     }
 
     println!(
-        "Known words: {} entries in list, {} DB rows marked",
+        "Known words: {} entries, {} DB rows marked",
         words.len(),
         matched
     );

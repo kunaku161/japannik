@@ -1,0 +1,36 @@
+#separator:tab
+#html:false
+{ずばり;2}	{ズバリ;2}４０[ｋｍ|きろめーとる]の{コース;1}		deutlichklipp und klaroffen			HunterXHunter	ずばり
+{[反則|はんそく];0}	{[何|なに];!0}のってその{スケボー;0}{[反則|はんそく];0}だろう		Foul Regelverstoß Regelwidrigkeit			HunterXHunter	反則
+{[持久力|じきゅうりょく];2}	{な[っ=る];Y0}これは{[持久力|じきゅうりょく];2}の{テスト;1}なんだぞ		Ausdauer			HunterXHunter	持久力
+{[巫山戯|ふざけ]る;Y3}	{クッソ;1} {[～|にょろ];0} {ふざけ[=る];Y3} {や[=る];Y0}{が[っ=る];Y1}てぇ		spaßen Spaß machen scherzen			HunterXHunter	巫山戯る
+{[放|ほう]る;Y0}	おい{ほう[っ=る];Y0}{と[け=く];Y1}よ{[早|はや][く=い];Y2}{[行|い][こう=く];Y0}ぜ		verzichten auf seinen Lauf lassen sich nicht um etw. kümmern			HunterXHunter	放る
+{[地点|ちてん];1,0,2}	８０[ｋｍ|きろめーとる]{[地点|ちてん];1,0,2}を{[通過|つうか];0}しました		Punkt Stelle Ort geographischer Punkt			HunterXHunter	地点
+や{がる;Y1}	{[楽々|らくらく];3,0}と{[上|のぼ][って=る];Y0}{[行|い][き=く];Y0}や{がる;Y1}		verdammt noch mal tun (als Suffix an Renyô・kei eines Verbes; drückt ugs. unter Männern eine unhöfliche ablehnende Haltung gegenüber Gesprächspartner oder die Handlung einer Person bzw. Beleidigung oder Verachtung aus)			HunterXHunter	やがる
+{[軽薄|けいはく];0}	{[確|たし]か;1}に{お[前|まえ];0}の{[態度|たいど];1}は{[軽薄|けいはく];0}で{[頭|あたま];3,2}も{[悪|わる]い;Y2}		leichtfertig leichtsinnig  wankelmütig   Unbedachtsamkeit			HunterXHunter	軽薄
+{[底|そこ];0}が{[浅|あさ]い;Y0}	だが{[決|けっ]して;0}{[底|そこ];0}が{[浅|あさ]い;Y0}とは{[思|おも][わない=う];Y2}		深みがない	Aber ich denke sicher nicht, dass du oberflächlich wärst		HunterXHunter	浅い
+{[動機|どうき];0}	{[仲間|なかま];3}の{[苦|くる]しみ;0,4,3}に{[比|くら]べ[れば=る];Y0}{[私|わたし];0}の{[誇|ほこ]り;0,3}など{[意味|いみ];1}の{ないもの;0}だ {[悪|わる]い;Y2}が{[俺|おれ];0}には{お[前|まえ];0}みたいな{[立派|りっぱ];0}な{[動機|どうき];0}はねえよ えっ {[俺|おれ];0}の{[目的|もくてき];0}は{やっぱり;3}{[金|きん];1}さ		Motiv, Beweggrund			HunterXHunter	動機
+{[次第|しだい];0}だ	{[買|か]える;Y0}さ[物|もの]は{もちろん;2}{[夢|ゆめ];2}も{[心|こころ];2,3}も{[人|ひと];!0}の{[命|いのち];1}だって {[金|きん];1}{[次第|しだい];0}だ		[意味] 〜によって決まる  [英訳] depends on	Was meinst du denn? Mit Geld kann man Sachen kaufen, klar, aber auch Träume und Wünsche und selbst Menschenleben! Es hängt alles am Geld!		HunterXHunter	次第だ
+{[拍子抜|ひょうしぬ]け;0,5}  ({[難関|なんかん];0})	{ものすごい;Y4}{[難関|なんかん];0}だって{いわれ;0}てるから {[面白|おもしろ][そう=い];Y4}だと{[思|おも][った=う];Y2}だけさ けど{[拍子抜|ひょうしぬ]け;0,5}だな		Enttäuschung  (Hindernis)			HunterXHunter	拍子抜け
+{[審査|しんさ];1}	{[審査|しんさ];1}{[委員会|いいんかい];2}から{[依頼|いらい];0}{され[た=る];Y0}{ハンター;1}が		Prüfung Untersuchung Beurteilung Jury			HunterXHunter	審査
+[一段|いちだん]と	[一段|いちだん]と{[霧|きり];0}が{[濃|こ][く=い];Y1}{な[って=る];Y0}{[来|き]た;Y1|くる}な		noch mehr, weiter			HunterXHunter	一段
+[先頭集団|せんとうしゅうだん]	[先頭集団|せんとうしゅうだん]を{[見失|みうしな][って=う];Y0,4}{しま[った=う];Y0}		leading group (of runners in a marathon, etc.) leading pack			HunterXHunter	先頭集団
+{[誓|ちか]う;Y2,0}	{[二度|にど]と;2}{ハンター;1}{[試験|しけん];2}を{[受|う]け[ない=る];Y2}と{[誓|ちか][えば=う];Y2,0}{[見逃|みのが][して=す];Y0,3}{やる;Y0}ぜ		schwören			HunterXHunter	誓う
+{[見逃|みのが]す;Y0,3}	{[二度|にど]と;2}{ハンター;1}{[試験|しけん];2}を{[受|う]け[ない=る];Y2}と{[誓|ちか][えば=う];Y2,0}{[見逃|みのが][して=す];Y0,3}{やる;Y0}ぜ		über etw. hinwegsehen			HunterXHunter	見逃す
+{[合図|あいず];1}  ({バラバラ;1,0}に{[逃|に]げる;Y2})	レオ{リオ;1}{[私|わたし];0}が{[合図|あいず];1}したら {[左右|さゆう];1}{バラバラ;1,0}に{[逃|に]げる;Y2}んだ		ein Zeichen geben  (aufteilen und fliehen)			HunterXHunter	合図
+{[賢明|けんめい];0}	フッ{なるほど;0} {[賢明|けんめい];0}な{[判断|はんだん];1,3}だハハハ		vernünftig weise klug einsichtig			HunterXHunter	賢明
+{[性|しょう];1}	{[何|なに];!0}にもしねえで{[逃|に]げる;Y2}なんて {[俺|おれ];0}の{[性|しょう];1}には{[合|あ][わねえ=う];Y1}んだよ		"Temperament  (bei anderer Lesung せい heißt es ""Charakter"")"			HunterXHunter	性
+{わくわく;1}	{[怖|こわ][くて=い];Y2}{[逃|に]げ[出|だ][したい=す];Y3,0}って{[思|おも][った=う];Y2}けどそれも{でき[なくて=る];Y2} でも{わくわく;1}したんだへんだよね		excited nervös, aufgeregt, gespannt			HunterXHunter	わくわく
+{[辿|たど]り[着|つ]く;Y4,2}	{お[前|まえ];0}よくここまで{[辿|たど][り=る];Y2,0}{[着|き][=る];Y0}いたな		endlich erreichen, mit Mühe und Not erreichen			HunterXHunter	辿り着く
+{[辿|たど]る;Y2,0}	レオ{リオ;1}の{[香水|こうすい];0}の{[匂|にお]い;2}を{[辿|たど][った=る];Y2,0}んだ		verfolgen (eine Spur), entlanggehen (einen Weg), folgen (einer Route)			HunterXHunter	辿る
+{[棲息|せいそく];0}	ビスカの{[森|もり];0}に{[棲息|せいそく];0}する{[豚|ぶた];0}って{い[ったら=う];Y2}一{[種類|しゅるい];1}だけでしょう		Wohnen Nisten Hausen (Tiere)			HunterXHunter	棲息
+{[凶暴|きょうぼう];0}	グレイトスタンプ{[世界|せかい];1,2}で{もっとも;3,1}{[凶暴|きょうぼう];0}な{[豚|ぶた];0}だ		Brutalität, Grausamkeit, Blutdurst			HunterXHunter	凶暴
+{[弾|はじ]き[飛|と]ばす;Y5,0}	{[大|おお]き[くて=い];Y3}{[頑丈|がんじょう];0}な{[鼻|はな];0}で{[敵|てき];0}を{[弾|はじ]き[飛|と]ばす;Y5,0}		to flick off to give ... the flick to send something flying			HunterXHunter	弾き飛ばす
+{ひょっと;0}して 2	あ {ひょっと;0}して {ど[りゃ=る];Y1}[ー|ちょうおん]		durch Zufall, durch einen glücklichen Umstand	(dup Samurai-Champloo)  ひょっとして私嫌われてる？		HunterXHunter	ひょっとして
+{[探険|たんけん];0}	よーし{ゴン;1}{[飛行船|ひこうせん];0}の{[中|ちゅう];1}{[探険|たんけん];0}しようぜ		erforschen, Expedition machen			HunterXHunter	探険
+{[手錠|てじょう];0}	{[受験者|じゅけんしゃ];2}が{[来|き]た;Y1|くる}ぜ{[手錠|てじょう];0}を{はず[して=す];Y3}{くれ[=る];Y0}		Handschellen			HunterXHunter	手錠
+{[挑発|ちょうはつ];0}	だめだやつの{[挑発|ちょうはつ];0}に{[乗|の][って=る];Y0}は{いけ[ない=る];Y2}		Provokation Herausforderung Erregung			HunterXHunter	挑発
+{[足|あし];2}を{ひっぱる;Y3}	てめぇが{[他人|たにん];0}の{[足|あし];2}を{ひっぱ[って=る];Y3}ばかりの{[屑|くず];1}{[野郎|やろう];0,2}だってことな		behindern, jmdm. Steine in den Weg legen, sich jmdm. in den Weg stellen	Schon in PunPun gab es diese Phrase in einer Karte		HunterXHunter	足をひっぱる
+{[如何|いか]なる;2}	{[如何|いか]なる;2}{[戦|たたか]い;0}が{[始|はじ]まる;Y0}のだろうか		was für ein			HunterXHunter	如何なる
+{[点|とも]す;Y2,0}	{[同時|どうじ]に;0,3}{[蝋燭|ろうそく];3,4}に{[火|ひ];1}を{[点|とも][し=す];Y2,0}		anzünden	Wollte die Phrase ganz haben. Kerze ist natürlich das andere Wort.		HunterXHunter	点す
+{[罠|わな];1}	{どっち;1}か{[選|えら]ぶ;Y2}ってあれは{[罠|わな];1}だ		Falle			HunterXHunter	罠

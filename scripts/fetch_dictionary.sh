@@ -19,4 +19,4 @@ mv ${DICT_NAME}/system_${DICT_TYPE}.dic ../resources/system.dic
 rm -rf ${DICT_NAME}.zip ${DICT_NAME}
 
 echo
-echo "Placed a dictionary file to \`../resources/system.dic\` ."
+echo "Placed a dictionary file to \`../resources/system.dic\` ."s

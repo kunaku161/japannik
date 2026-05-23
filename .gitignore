@@ -5,3 +5,5 @@ notes/
 JMdict
 system.dic
 japannik.db
+frequency_spoken.tsv
+output/

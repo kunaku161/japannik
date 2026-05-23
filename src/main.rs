@@ -1,4 +1,5 @@
 mod db;
+mod known_words;
 mod normalizer;
 
 use normalizer::Normalizer;
@@ -9,12 +10,23 @@ use std::path::PathBuf;
 use std::time::{SystemTime, UNIX_EPOCH};
 
 const MAX_LEMMAS: usize = 15;
+// Set to true to also add the sudachi dictionary form of each known word,
+// which catches inflected forms (e.g. 構わない → also marks 構う as known).
+const NORMALIZE_KNOWN_WORDS: bool = true;
 
 fn main() {
     db::init_dictionary("japannik.db", "resources/JMdict");
-    let known_words = db::load_known_words("japannik.db");
+    db::init_frequency("japannik.db", "resources/frequency_spoken.tsv");
 
     let mut normalizer = Normalizer::new(Some(PathBuf::from("resources/system.dic")));
+
+    let known_set = known_words::load_from_dir(
+        "known_words",
+        0,
+        if NORMALIZE_KNOWN_WORDS { Some(&mut normalizer) } else { None },
+    );
+    db::sync_known_words("japannik.db", &known_set);
+    let known_words = db::load_known_words("japannik.db");
 
     let text = read_text_from_input("input");
     println!("Read {} characters from input files", text.chars().count());
